@@ -1,4 +1,5 @@
 <script>
+import ValueChange from './ValueChange.vue';
 export default {
     data() {
         return {
@@ -7,15 +8,21 @@ export default {
     },
     methods: {
 
+    },
+    components: {
+        ValueChange
     }
 }
 </script>
 
 <template>
     <main>
-        <h1>
-            Converter
-        </h1>
+        <div class="container border-success border ">
+            <h1>
+                Converter
+            </h1>
+            <ValueChange />
+        </div>
     </main>
 </template>
 
