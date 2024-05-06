@@ -13,7 +13,9 @@ export default {
 
 <template>
     <main>
-        MAIN
+        <h1>
+            Converter
+        </h1>
     </main>
 </template>
 
