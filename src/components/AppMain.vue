@@ -7,7 +7,9 @@ export default {
         };
     },
     methods: {
-
+        getConsoleLog(){
+            console.log('ciao')
+        }
     },
     components: {
         ValueChange
@@ -21,7 +23,7 @@ export default {
             <h1>
                 Converter
             </h1>
-            <ValueChange />
+            <ValueChange @changeValue="getConsoleLog()"/>
         </div>
     </main>
 </template>

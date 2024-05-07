@@ -21,7 +21,7 @@ export default {
                 {{ money }} equivale a {{ money2 }}
             </span>
         </div>
-        <input type="number" v-model="money">
+        <input type="number" v-model="money" @keyup="$emit('changeValue')">
         <select name="money" id="money" >
             <option :value="elem" v-for="(elem, i) in store.currencyValue" :key="i" :selected = "elem == 'Euro'">
                 {{ elem }}
