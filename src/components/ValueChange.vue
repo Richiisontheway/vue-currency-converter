@@ -5,8 +5,7 @@ export default {
     data() {
         return {
             store,
-            money: '1', 
-            money2:'1.08'
+            
         };
     },
     methods: {
@@ -16,12 +15,8 @@ export default {
 </script>
 <template>
     <div>
-        <div>
-            <span>
-                {{ money }} equivale a {{ money2 }}
-            </span>
-        </div>
-        <input type="number" v-model="money" @keyup="$emit('changeValue')">
+        
+        <input type="number" v-model="store.money" @keyup="$emit('changeValue')">
         <select name="money" id="money" >
             <option :value="elem" v-for="(elem, i) in store.currencyValue" :key="i" :selected = "elem == 'Euro'">
                 {{ elem }}
@@ -29,7 +24,7 @@ export default {
         </select>
     </div>
     <div>
-        <input type="number"  v-model="money2">
+        <input type="number"  v-model="store.money2" @keyup="$emit('changeValue2')">
         <select name="money2" id="money2" >
             <option :value="elem" v-for="(elem, i) in store.currencyValue" :key="i" :selected = "elem == 'United States Dollar'">
                 {{ elem }}

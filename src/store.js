@@ -6,6 +6,8 @@ export const store = reactive({
     conversion: [],
     currency: [],
     currencyKey: [],
-    currencyValue: []
+    currencyValue: [],
+    money: '1', 
+    money2:'1.08'
     
 });
