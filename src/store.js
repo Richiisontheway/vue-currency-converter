@@ -8,6 +8,10 @@ export const store = reactive({
     currencyKey: [],
     currencyValue: [],
     money: '1', 
-    money2:'1.08'
+    money2:'1.08',
+    selectedCurrency: 'Euro',
+    selectedCurrency2: 'United States Dollar'
     
 });
+
+
