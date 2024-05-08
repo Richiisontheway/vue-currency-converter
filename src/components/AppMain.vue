@@ -38,7 +38,7 @@ export default {
             </h1>
             <div>
                 <span>
-                    {{ store.money }} equivale a {{ store.money2 }}
+                    {{ store.money }} {{ store.selectedCurrency }} equivale a {{ store.money2 }} {{ store.selectedCurrency2 }}
                 </span>
             </div>
             <ValueChange @changeValue="getConversion()" @changeValue2="getConversion2()"/>
