@@ -27,10 +27,10 @@ export default {
                 .then((response)=>{
                     this.store.currency = response.data
                     console.log(this.store.currency);
-                    this.store.currencyValue = Object.values(this.store.currency);
-                    console.log(this.store.currencyValue);
-                    this.store.currencyKey = Object.keys(this.store.currency);
-                    console.log(this.store.currencyKey)
+                    // this.store.currencyValue = Object.values(this.store.currency);
+                    // console.log(this.store.currencyValue);
+                    // this.store.currencyKey = Object.keys(this.store.currency);
+                    // console.log(this.store.currencyKey)
                 })
         }
     },

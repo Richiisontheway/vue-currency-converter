@@ -22,7 +22,7 @@ export default {
         
         <input type="number" v-model="store.money" @keyup="$emit('changeValue')">
         <select name="money" id="money" v-model="store.selectedCurrency">
-            <option :value="elem" v-for="(elem, i) in store.currencyValue" :key="i">
+            <option :value="elem" v-for="(elem, i) in store.currency" :key="i">
                 {{ elem }}
             </option>
         </select>
@@ -30,8 +30,9 @@ export default {
     <div>
         <input type="number"  v-model="store.money2" @keyup="$emit('changeValue2')">
         <select name="money2" id="money2"v-model="store.selectedCurrency2" >
-            <option :value="elem" v-for="(elem, i) in store.currencyValue" :key="i">
+            <option :value="elem" v-for="(elem, i) in store.currency" :key="i">
                 {{ elem }}
+                {{ console.log(i) }}
             </option>
         </select>
     </div>
