@@ -9,8 +9,8 @@ export const store = reactive({
     currencyValue: [],
     money: '1', 
     money2:'1.08',
-    selectedCurrency: 'Euro',
-    selectedCurrency2: 'United States Dollar'
+    selectedCurrency: 'EUR',
+    selectedCurrency2: 'USD'
     
 });
 
