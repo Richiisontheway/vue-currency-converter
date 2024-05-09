@@ -16,8 +16,8 @@ export default {
                 console.log(response.data.rates.USD)
             });
         },
-        getConversion2(){
-            axios.get(`https://${store.host}/latest?amount=${store.money2}&from=${this.store.selectedCurrency2}&to=${this.store.selectedCurrency}`)
+        getConversion2(selectedCurrency2){
+            axios.get(`https://${store.host}/latest?amount=${store.money2}&from=${selectedCurrency2}&to=${this.store.selectedCurrency}`)
             .then((response) => {
                 store.money = response.data.rates.EUR;
                 console.log(response.data.rates.EUR)
@@ -26,7 +26,7 @@ export default {
     },
     components: {
         ValueChange
-    }
+    },
 }
 </script>
 
@@ -41,7 +41,7 @@ export default {
                     {{ store.money }} {{ store.selectedCurrency }} equivale a {{ store.money2 }} {{ store.selectedCurrency2 }}
                 </span>
             </div>
-            <ValueChange @changeValue="getConversion()" @changeValue2="getConversion2()"/>
+            <ValueChange @changeValue="getConversion()" @changeValue2="getConversion2(store.selectedCurrency2)" @changeCoin="getConversion()" @changeCoin2="getConversion2(store.selectedCurrency2)" />
         </div>
     </main>
 </template>

@@ -5,8 +5,6 @@ export const store = reactive({
     host: 'api.frankfurter.app',
     conversion: [],
     currency: [],
-    currencyKey: [],
-    currencyValue: [],
     money: '1', 
     money2:'1.08',
     selectedCurrency: 'EUR',
